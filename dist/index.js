@@ -5969,6 +5969,12 @@ query($searchQuery: String!, $cursor: String) {
       ... on Issue {
         title
         url
+        labels {
+          nodes {
+            name
+          }
+        }
+        createdAt
       }
     }
   }

@@ -9,6 +9,11 @@ import { GitHub } from '@actions/github/lib/utils'
 export interface Issue {
   title: string
   url: string
+  labels: {
+    nodes: Array<{
+      name: string
+    }>
+  }
 }
 
 /**
@@ -49,6 +54,12 @@ query($searchQuery: String!, $cursor: String) {
       ... on Issue {
         title
         url
+        labels {
+          nodes {
+            name
+          }
+        }
+        createdAt
       }
     }
   }
