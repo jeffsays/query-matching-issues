@@ -1,4 +1,4 @@
-name: select-matching-issues
+name: query-matching-issues
 description: Selects issues matching a query
 inputs:
   format:
